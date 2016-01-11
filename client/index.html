@@ -1,0 +1,27 @@
+<head>
+	
+
+</head>
+
+<body>
+	<header class="navbar navbar-default">
+		<nav class="navbar-header">
+			<a href="#" class="navbar-brand">
+				Tasks
+			</a>
+		</nav>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				{{> loginButtons}}
+			</ul>
+		</div> 
+	</header> 
+	<main class="container">
+	{{#if currentUser}}
+		{{> insert}}
+		{{> list}}
+	{{else}}
+		Login first
+	{{/if}}
+	</main>
+</body>
